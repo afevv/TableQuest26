@@ -6,20 +6,24 @@ import Social from './pages/Social'
 import CustomReminders from './pages/CustomReminders'
 import Progress from './pages/Progress'
 import Settings from './pages/Settings'
+import NotificationToast from './components/NotificationToast'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route element={<SidebarLayout />}>
-        <Route path="/physical" element={<Physical />} />
-        <Route path="/social" element={<Social />} />
-        <Route path="/reminders" element={<CustomReminders />} />
-        <Route path="/progress" element={<Progress />} />
-        <Route path="/settings" element={<Settings />} />
-      </Route>
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <NotificationToast />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route element={<SidebarLayout />}>
+          <Route path="/physical" element={<Physical />} />
+          <Route path="/social" element={<Social />} />
+          <Route path="/reminders" element={<CustomReminders />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/settings" element={<Settings />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   )
 }
 

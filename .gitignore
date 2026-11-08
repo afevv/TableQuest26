@@ -1,0 +1,11 @@
+# Local credentials and build output
+Pico/secrets.h
+Pico/build/
+
+# Frontend dependencies and generated files
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+build
+!.vscode/*

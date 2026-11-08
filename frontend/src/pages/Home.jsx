@@ -1,5 +1,3 @@
-import Hero from "../components/Hero"
-
 function Home() {
   return (
     <section className="p-6">

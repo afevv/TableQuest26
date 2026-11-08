@@ -28,6 +28,13 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
+# University-managed PCs may block the unsigned prebuilt Pico tools. Set this
+# environment variable to build the host tools locally with MSVC instead.
+if(DEFINED ENV{TABLEQUEST_BUILD_PICO_TOOLS})
+    set(pioasm_DIR "${CMAKE_BINARY_DIR}/host-tools/pioasm")
+    set(PICO_NO_PICOTOOL 1 CACHE BOOL "Skip blocked prebuilt picotool" FORCE)
+endif()
+
 project(Pico C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
@@ -42,7 +49,7 @@ pico_set_program_version(Pico "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(Pico 0)
-pico_enable_stdio_usb(Pico 0)
+pico_enable_stdio_usb(Pico 1)
 
 # Add the standard library to the build
 target_link_libraries(Pico
@@ -56,7 +63,8 @@ target_include_directories(Pico PRIVATE
 # Add any user requested libraries
 target_link_libraries(Pico 
         hardware_i2c
-        
+        pico_cyw43_arch_lwip_threadsafe_background
+        pico_lwip_mqtt
         )
 
 pico_add_extra_outputs(Pico)

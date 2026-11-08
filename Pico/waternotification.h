@@ -49,6 +49,7 @@ public:
         // 45 minutes passed -> start the notification
         if (!active && t - lastStart >= INTERVAL_MS) {
             active = true;
+            started = true;
             lastStart = t;
         }
 
@@ -63,8 +64,16 @@ public:
         }
     }
 
+    // Returns true once for each newly started reminder.
+    bool justStarted() {
+        const bool result = started;
+        started = false;
+        return result;
+    }
+
 private:
     bool active = false;
+    bool started = false;
     bool visible = false;
     uint32_t lastStart = 0;
     uint8_t screen[128 * 64 / 8];
