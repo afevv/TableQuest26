@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router";
 
 import logo from "../assets/TQLogoTransparent.png";
 import smallLogo from "../assets/TQLogoSmall.png";
+import expandedLogo from "../assets/TQSmallv2.png";
 import exerciseIcon from "../assets/exercise-icon.png";
 import socialIcon from "../assets/social-icon.png";
 import remindersIcon from "../assets/reminders-icon.png";
@@ -24,7 +25,7 @@ function Sidebar() {
       <h1 className="mb-8 px-2">
         <Link to="/" className="flex h-12 items-center justify-center">
           <img src={smallLogo} alt="TableQuest" className="size-full scale-125 object-contain group-hover:hidden group-focus-within:hidden" />
-          <img src={logo} alt="TableQuest" className="hidden h-12 w-full object-cover brightness-0 invert group-hover:block group-focus-within:block" />
+          <img src={expandedLogo} alt="TableQuest" className="hidden h-12 w-[85%] object-contain group-hover:block group-focus-within:block" />
         </Link>
       </h1>
 
