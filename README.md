@@ -2,13 +2,11 @@
 group project
 
 
-To run frontend side:
+TO RUN THE PROJECT, USE THE FOLLOWING COMMANDS IN THE TERMINAL
 
-1.step: In console write: cd frontend
-(It moves you to a frontend folder)
-
-2.step: In the console write: npm run dev
-(It will compile the web page)
+cd frontend
+npm.cmd install  // required to bypass the Execution_Policies error - If you already installed it, you may not use the command anymore
+npm.cmd run dev
 
 
 For frontend design components we use Tailwind with DaisyUI on to.
