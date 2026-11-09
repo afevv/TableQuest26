@@ -1,13 +1,13 @@
 import { Link, NavLink } from "react-router";
 
-import physicalIcon from "../assets/physical-icon.png";
+import exerciseIcon from "../assets/exercise-icon.png";
 import socialIcon from "../assets/social-icon.png";
 import remindersIcon from "../assets/reminders-icon.png";
 import progressIcon from "../assets/progress-icon.png";
 import settingsIcon from "../assets/settings-icon.png";
 
 const navItems = [
-  { to: "/physical", label: "Physical", icon: physicalIcon },
+  { to: "/exercise", label: "Exercise", icon: exerciseIcon },
   { to: "/social", label: "Social", icon: socialIcon },
   { to: "/reminders", label: "Custom Reminders", icon: remindersIcon },
   { to: "/progress", label: "Progress", icon: progressIcon },

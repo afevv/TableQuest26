@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router'
 import SidebarLayout from './components/SidebarLayout'
 import Home from './pages/Home'
-import Physical from './pages/Physical'
+import Exercise from './pages/Exercise'
 import Social from './pages/Social'
 import CustomReminders from './pages/CustomReminders'
 import Progress from './pages/Progress'
@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route element={<SidebarLayout />}>
-        <Route path="/physical" element={<Physical />} />
+        <Route path="/exercise" element={<Exercise />} />
         <Route path="/social" element={<Social />} />
         <Route path="/reminders" element={<CustomReminders />} />
         <Route path="/progress" element={<Progress />} />
