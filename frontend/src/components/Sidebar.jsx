@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router";
 import logo from "../assets/TQLogoTransparent.png";
 import smallLogo from "../assets/TQLogoSmall.png";
 import expandedLogo from "../assets/TQSmallv2.png";
+import homeIcon from "../assets/home-icon.png";
 import exerciseIcon from "../assets/exercise-icon.png";
 import socialIcon from "../assets/social-icon.png";
 import remindersIcon from "../assets/reminders-icon.png";
@@ -11,6 +12,7 @@ import settingsIcon from "../assets/settings-icon.png";
 import aboutUsIcon from "../assets/aboutus-icon.png";
 
 const navItems = [
+  { to: "/home", label: "Home", icon: homeIcon, activeClass: "bg-cyan-500/20 text-cyan-300 border-cyan-400" },
   { to: "/exercise", label: "Exercise", icon: exerciseIcon, activeClass: "bg-[#0439b2]/40 text-[#5b8cff] border-[#5b8cff]" },
   { to: "/social", label: "Social", icon: socialIcon, iconClass: "scale-125", activeClass: "bg-[#ff8c4a]/20 text-[#ff8c4a] border-[#ff8c4a]" },
   { to: "/reminders", label: "Custom Reminders", icon: remindersIcon, activeClass: "bg-purple-500/20 text-purple-300 border-purple-400" },

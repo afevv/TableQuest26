@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router'
 import SidebarLayout from './components/SidebarLayout'
+import Introduction from './pages/Introduction'
 import Home from './pages/Home'
 import Exercise from './pages/Exercise'
 import Social from './pages/Social'
@@ -11,8 +12,9 @@ import AboutUs from './pages/AboutUs'
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Introduction />} />
       <Route element={<SidebarLayout />}>
-        <Route index element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/exercise" element={<Exercise />} />
         <Route path="/social" element={<Social />} />
         <Route path="/reminders" element={<CustomReminders />} />
