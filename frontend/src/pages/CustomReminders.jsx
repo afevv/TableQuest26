@@ -1,5 +1,8 @@
 import { useState } from "react";
-
+// adapt to different web layouts and screen sizes   
+// insert glass size at workstation, and adjust daily water intake goals accordingly
+// make a delete "x" button for each reminder, and a confirmation dialog before deletion
+// think of how to organize in components, and how to make the code more readable and maintainable
 function CounterButton({ label, onClick, children }) {
   return (
     <button
