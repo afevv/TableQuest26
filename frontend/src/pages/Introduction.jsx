@@ -25,7 +25,7 @@ function Introduction() {
         <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-between">
           <img src={logo} alt="TableQuest" className="w-[210px] max-w-[55%] object-contain" />
           <Link
-            to="/home"
+            to="/exercise"
             className="rounded-xl border-2 border-slate-200 px-5 py-3 text-sm font-bold text-slate-800 transition-colors hover:border-blue-200"
           >
             I already have an account
@@ -48,7 +48,7 @@ function Introduction() {
             Every quest earns XP. Every centimetre your table travels counts.
           </p>
           <Link
-            to="/home"
+            to="/exercise"
             className="mt-8 inline-flex h-14 w-60 items-center justify-center rounded-xl bg-[#2f6fdb] px-8 font-bold tracking-widest text-white shadow-[0_4px_0_#1e4fa3] transition-transform hover:-translate-y-0.5 active:translate-y-1 active:shadow-none"
           >
             GET STARTED

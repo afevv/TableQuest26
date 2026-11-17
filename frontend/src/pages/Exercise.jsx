@@ -1,5 +1,5 @@
 
-function Home() {
+function Exercise() {
   return (
     <section className="min-h-screen bg-[#dce2ef] p-6">
       <h1 className="text-3xl font-bold text-black">
@@ -9,7 +9,7 @@ function Home() {
   )
 }
 
-export default Home
+export default Exercise
 
 
 // Add login page with Clerk.

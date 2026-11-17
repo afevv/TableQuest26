@@ -1,11 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router'
 import SidebarLayout from './components/SidebarLayout'
 import Introduction from './pages/Introduction'
-import Home from './pages/Home'
+import Exercise from './pages/Exercise'
 import DepartmentRace from './pages/DepartmentRace'
 import Social from './pages/Social'
-import CustomReminders from './pages/CustomReminders'
-import Progress from './pages/Progress'
+import SpaceJourney from './pages/SpaceJourney'
 import Settings from './pages/Settings'
 import Accessibility from './pages/Accessibility'
 import AboutUs from './pages/AboutUs'
@@ -15,12 +14,13 @@ function App() {
     <Routes>
       <Route path="/" element={<Introduction />} />
       <Route element={<SidebarLayout />}>
-        <Route path="/home" element={<Home />} />
+        <Route path="/exercise" element={<Exercise />} />
+        <Route path="/home" element={<Navigate to="/exercise" replace />} />
         <Route path="/department-race" element={<DepartmentRace />} />
-        <Route path="/exercise" element={<Navigate to="/department-race" replace />} />
         <Route path="/social" element={<Social />} />
-        <Route path="/reminders" element={<CustomReminders />} />
-        <Route path="/progress" element={<Progress />} />
+        <Route path="/reminders" element={<Navigate to="/settings" replace />} />
+        <Route path="/space-journey" element={<SpaceJourney />} />
+        <Route path="/progress" element={<Navigate to="/space-journey" replace />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/accessibility" element={<Accessibility />} />
         <Route path="/about-us" element={<AboutUs />} />

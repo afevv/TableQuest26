@@ -5,17 +5,15 @@ import exerciseIcon from "../assets/icons/exercise-icon.png";
 import socialIcon from "../assets/icons/nav-social.svg";
 import progressIcon from "../assets/space/rocket.svg";
 import raceIcon from "../assets/icons/nav-race.svg";
-import remindersIcon from "../assets/icons/nav-reminders.svg";
 import settingsIcon from "../assets/icons/nav-settings.svg";
 import accessibilityIcon from "../assets/icons/nav-accessibility.svg";
 import aboutUsIcon from "../assets/icons/nav-about.svg";
 
 const mainNavItems = [
-  { to: "/home", label: "Exercise", icon: exerciseIcon, activeClass: "border-[#2f6fdb] bg-[#2f6fdb]/20 text-[#2f6fdb]" },
+  { to: "/exercise", label: "Exercise", icon: exerciseIcon, activeClass: "border-[#2f6fdb] bg-[#2f6fdb]/20 text-[#2f6fdb]" },
   { to: "/social", label: "Social", icon: socialIcon, activeClass: "border-[#d96c07] bg-[#d96c07]/20 text-[#d96c07]" },
-  { to: "/progress", label: "Space Journey", icon: progressIcon, activeClass: "border-[#6366f1] bg-[#6366f1]/20 text-[#6366f1]" },
+  { to: "/space-journey", label: "Space Journey", icon: progressIcon, activeClass: "border-[#6366f1] bg-[#6366f1]/20 text-[#6366f1]" },
   { to: "/department-race", label: "Department Race", icon: raceIcon, activeClass: "border-[#16a34a] bg-[#16a34a]/20 text-[#16a34a]" },
-  { to: "/reminders", label: "Reminders", icon: remindersIcon, activeClass: "border-[#dc2626] bg-[#dc2626]/20 text-[#dc2626]" },
 ];
 
 const footerNavItems = [
