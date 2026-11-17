@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router";
 import logo from "../assets/images/TQLogoTransparent.png";
 import artwork from "../assets/images/TQartworktransparent.png";
-import getStarted from "../assets/images/GetStartedButtonArt.png";
 import linak from "../assets/images/linak.png";
 import sdu from "../assets/images/SDU.png";
 import pico from "../assets/images/artPicoSensors.png";
@@ -22,18 +21,37 @@ function Introduction() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      <header className="relative h-24 shrink-0 px-8 sm:px-16">
-        <img src={logo} alt="TableQuest" className="absolute -top-12 left-8 h-56 w-56 object-contain object-left sm:left-16" />
+      <header className="h-20 shrink-0 px-6 sm:px-12 lg:px-16">
+        <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-between">
+          <img src={logo} alt="TableQuest" className="w-[210px] max-w-[55%] object-contain" />
+          <Link
+            to="/home"
+            className="rounded-xl border-2 border-slate-200 px-5 py-3 text-sm font-bold text-slate-800 transition-colors hover:border-blue-200"
+          >
+            I already have an account
+          </Link>
+        </div>
       </header>
-      <main className="mx-auto grid w-full max-w-6xl flex-1 items-center gap-8 px-8 py-8 md:grid-cols-2 sm:px-12">
-        <img src={artwork} alt="Height-adjustable desk and activity goals" className="w-full" />
-        <div className="text-center md:text-left">
-          <h1 className="text-2xl font-bold leading-tight text-zinc-800 sm:text-3xl">
+      <main className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 items-center gap-10 px-6 py-10 md:grid-cols-2 md:gap-12 lg:px-12">
+        <img
+          src={artwork}
+          alt="Height-adjustable desk with activity and movement goals"
+          className="w-full max-w-[560px] justify-self-center"
+        />
+        <div className="mx-auto max-w-xl text-center">
+          <h1 className="text-3xl font-extrabold leading-tight text-slate-800 sm:text-4xl lg:text-5xl">
             Built around your work.
-            <span className="block text-blue-700">Designed around your growth.</span>
+            <span className="block text-[#2f6fdb]">Designed around your growth.</span>
           </h1>
-          <Link to="/home" className="mt-12 inline-block transition-transform duration-300 active:scale-95">
-            <img src={getStarted} alt="Get started" className="w-96 max-w-full" />
+          <p className="mx-auto mt-8 max-w-lg text-base leading-relaxed text-slate-500 sm:text-lg">
+            Your LINAK desk reminds you to move, drink water and talk to people.
+            Every quest earns XP. Every centimetre your table travels counts.
+          </p>
+          <Link
+            to="/home"
+            className="mt-8 inline-flex h-14 w-60 items-center justify-center rounded-xl bg-[#2f6fdb] px-8 font-bold tracking-widest text-white shadow-[0_4px_0_#1e4fa3] transition-transform hover:-translate-y-0.5 active:translate-y-1 active:shadow-none"
+          >
+            GET STARTED
           </Link>
         </div>
       </main>
