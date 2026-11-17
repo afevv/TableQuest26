@@ -1,15 +1,15 @@
 import { Link, NavLink } from "react-router";
 
-import logo from "../assets/TQLogoTransparent.png";
-import smallLogo from "../assets/TQLogoSmall.png";
-import expandedLogo from "../assets/TQSmallv2.png";
-import homeIcon from "../assets/home-icon.png";
-import exerciseIcon from "../assets/exercise-icon.png";
-import socialIcon from "../assets/social-icon.png";
-import remindersIcon from "../assets/reminders-icon.png";
-import progressIcon from "../assets/progress-icon.png";
-import settingsIcon from "../assets/settings-icon.png";
-import aboutUsIcon from "../assets/aboutus-icon.png";
+import logo from "../assets/images/TQLogoTransparent.png";
+import smallLogo from "../assets/images/TQLogoSmall.png";
+import expandedLogo from "../assets/images/TQSmallv2.png";
+import homeIcon from "../assets/icons/home-icon.png";
+import exerciseIcon from "../assets/icons/exercise-icon.png";
+import socialIcon from "../assets/icons/social-icon.png";
+import remindersIcon from "../assets/icons/reminders-icon.png";
+import progressIcon from "../assets/icons/progress-icon.png";
+import settingsIcon from "../assets/icons/settings-icon.png";
+import aboutUsIcon from "../assets/icons/aboutus-icon.png";
 
 const navItems = [
   { to: "/home", label: "Home", icon: homeIcon, activeClass: "bg-cyan-500/20 text-cyan-300 border-cyan-400" },

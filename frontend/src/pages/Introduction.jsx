@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router";
-import logo from "../assets/TQLogoTransparent.png";
-import artwork from "../assets/TQartworktransparent.png";
-import getStarted from "../assets/GetStartedButtonArt.png";
-import linak from "../assets/linak.png";
-import sdu from "../assets/SDU.png";
-import pico from "../assets/artPicoSensors.png";
+import logo from "../assets/images/TQLogoTransparent.png";
+import artwork from "../assets/images/TQartworktransparent.png";
+import getStarted from "../assets/images/GetStartedButtonArt.png";
+import linak from "../assets/images/linak.png";
+import sdu from "../assets/images/SDU.png";
+import pico from "../assets/images/artPicoSensors.png";
 
 function Introduction() {
   const carouselRef = useRef(null);

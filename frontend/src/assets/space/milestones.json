@@ -1,0 +1,66 @@
+[
+  {
+    "file": "01-launchpad.svg",
+    "unlock_metres": 0.1
+  },
+  {
+    "file": "02-leave-earth.svg",
+    "unlock_metres": 1
+  },
+  {
+    "file": "03-earth-orbit.svg",
+    "unlock_metres": 10
+  },
+  {
+    "file": "04-space-station.svg",
+    "unlock_metres": 50
+  },
+  {
+    "file": "05-moon.svg",
+    "unlock_metres": 100
+  },
+  {
+    "file": "06-mars.svg",
+    "unlock_metres": 500
+  },
+  {
+    "file": "07-asteroid-belt.svg",
+    "unlock_metres": 750
+  },
+  {
+    "file": "08-jupiter.svg",
+    "unlock_metres": 1000
+  },
+  {
+    "file": "09-europa.svg",
+    "unlock_metres": 2500
+  },
+  {
+    "file": "10-saturn.svg",
+    "unlock_metres": 5000
+  },
+  {
+    "file": "11-uranus.svg",
+    "unlock_metres": 6500
+  },
+  {
+    "file": "12-neptune.svg",
+    "unlock_metres": 8000
+  },
+  {
+    "file": "13-galaxy.svg",
+    "unlock_metres": 10000
+  },
+  {
+    "file": "14-nebula.svg",
+    "unlock_metres": 25000
+  },
+  {
+    "file": "15-black-hole.svg",
+    "unlock_metres": 50000
+  },
+  {
+    "file": "16-deep-space.svg",
+    "unlock_metres": 100000
+  }
+]
