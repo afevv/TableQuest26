@@ -2,12 +2,19 @@ import { Link, NavLink } from "react-router";
 
 import logo from "../assets/images/TQSmallv2.png";
 import exerciseIcon from "../assets/icons/exercise-icon.png";
+import creativeStar from "../assets/icons/creative-star.svg";
 import socialIcon from "../assets/icons/nav-social.svg";
 import progressIcon from "../assets/space/rocket.svg";
 import raceIcon from "../assets/icons/nav-race.svg";
 import settingsIcon from "../assets/icons/nav-settings.svg";
 import accessibilityIcon from "../assets/icons/nav-accessibility.svg";
 import aboutUsIcon from "../assets/icons/nav-about.svg";
+
+const creativeNavItem = {
+  label: "Creative",
+  icon: creativeStar,
+  activeClass: "border-[#6b4bd4] bg-[#6b4bd4]/20 text-[#6b4bd4]",
+};
 
 const mainNavItems = [
   { to: "/exercise", label: "Exercise", icon: exerciseIcon, activeClass: "border-[#2f6fdb] bg-[#2f6fdb]/20 text-[#2f6fdb]" },
@@ -18,7 +25,7 @@ const mainNavItems = [
 
 const footerNavItems = [
   { to: "/settings", label: "Settings", icon: settingsIcon, activeClass: "border-[#9ca3af] bg-[#9ca3af]/20 text-[#9ca3af]" },
-  { to: "/accessibility", label: "Accessibility", icon: accessibilityIcon, activeClass: "border-[#14b8a6] bg-[#14b8a6]/20 text-[#14b8a6]" },
+  { to: "/accessibility", label: "Accessibility", icon: accessibilityIcon, activeClass: "border-[#a78bfa] bg-[#a78bfa]/20 text-[#a78bfa]" },
   { to: "/about-us", label: "About Us", icon: aboutUsIcon, activeClass: "border-[#8b5cf6] bg-[#8b5cf6]/20 text-[#8b5cf6]" },
 ];
 
@@ -48,7 +55,13 @@ function NavigationItems({ items }) {
   ));
 }
 
-function Sidebar() {
+function Sidebar({ creativeMode = false }) {
+  const navItems = mainNavItems.map((item) =>
+    item.to === "/exercise" && creativeMode
+      ? { ...item, ...creativeNavItem }
+      : item
+  );
+
   return (
     <aside className="fixed inset-y-0 left-0 z-50 flex h-screen w-[260px] flex-col bg-[#171717] px-2 py-6 text-white">
       <h1 className="mb-7 px-3">
@@ -58,7 +71,7 @@ function Sidebar() {
       </h1>
 
       <nav aria-label="Main navigation" className="flex flex-col gap-1">
-        <NavigationItems items={mainNavItems} />
+        <NavigationItems items={navItems} />
       </nav>
 
       <nav aria-label="Account navigation" className="mt-auto flex flex-col gap-1 border-t border-gray-800 pt-3">
