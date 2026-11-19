@@ -1,5 +1,5 @@
-import rocket from "../assets/space/rocket.svg"
-import { MILESTONES, formatDistance } from "../data/milestones"
+import rocket from "../../assets/space/rocket.svg"
+import { MILESTONES, formatDistance } from "../../data/milestones"
 
 function getProgress(traveled) {
   const n = MILESTONES.length

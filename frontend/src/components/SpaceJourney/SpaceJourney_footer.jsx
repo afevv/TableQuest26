@@ -1,4 +1,4 @@
-import { formatDistance, getLastStop, getNextStop } from "../data/milestones"
+import { formatDistance, getLastStop, getNextStop } from "../../data/milestones"
 
 function SpaceJourney_footer({ traveled = 0 }) {
     const lastStop = getLastStop(traveled)
@@ -22,7 +22,7 @@ function SpaceJourney_footer({ traveled = 0 }) {
         <div className="card w-full bg-[#171717] shadow-md rounded-3xl">
           <div className="card-body">
             <h2 className="card-title text-primary/75 text-base md:text-lg lg:text-xl">DISTANCE TRAVELLED</h2>
-            <h1 className="text-4xl xl:text-5xl font-bold break-words">{formatDistance(traveled)}</h1>
+            <h1 className="text-4xl xl:text-5xl font-bold wrap-break">{formatDistance(traveled)}</h1>
             <p className="text-base md:text-lg lg:text-xl">
               {nextStop
                 ? `Next stop: ${nextStop.name} (${formatDistance(nextStop.distance - traveled)} to go)`
@@ -35,7 +35,7 @@ function SpaceJourney_footer({ traveled = 0 }) {
 
         <div className="card w-full bg-[#171717] shadow-md rounded-3xl">
           <div className="card-body">
-            <h2 className="card-title text-primary/75 text-base md:text-lg lg:text-xl">CREW</h2>
+            <h2 className="card-title text-primary/75 text-base md:text-lg lg:text-xl">TEAM</h2>
             <h1 className="text-4xl xl:text-5xl font-bold">
             </h1>
             <div className="justify-end card-actions">
