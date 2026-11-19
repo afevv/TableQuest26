@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router";
 
 import logo from "../assets/images/TQSmallv2.png";
@@ -9,6 +10,7 @@ import raceIcon from "../assets/icons/nav-race.svg";
 import settingsIcon from "../assets/icons/nav-settings.svg";
 import accessibilityIcon from "../assets/icons/nav-accessibility.svg";
 import aboutUsIcon from "../assets/icons/nav-about.svg";
+import { CreativeModeContext } from "../utils/creativeModeContext";
 
 const creativeNavItem = {
   label: "Creative",
@@ -35,7 +37,7 @@ function NavigationItems({ items }) {
       key={label}
       to={to}
       className={({ isActive }) =>
-        `flex h-[54px] items-center gap-4 rounded-xl border-l-4 px-3 text-base font-semibold transition-colors ${
+        `flex h-13.5 items-center gap-4 rounded-xl border-l-4 px-3 text-base font-semibold transition-colors ${
           isActive
             ? activeClass
             : "border-transparent text-gray-200 hover:bg-white/10"
@@ -55,7 +57,8 @@ function NavigationItems({ items }) {
   ));
 }
 
-function Sidebar({ creativeMode = false }) {
+function Sidebar() {
+  const creativeMode = useContext(CreativeModeContext);
   const navItems = mainNavItems.map((item) =>
     item.to === "/exercise" && creativeMode
       ? { ...item, ...creativeNavItem }
@@ -63,10 +66,10 @@ function Sidebar({ creativeMode = false }) {
   );
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-50 flex h-screen w-[260px] flex-col bg-[#171717] px-2 py-6 text-white">
+    <aside className="sticky top-0 z-50 flex h-screen w-65 shrink-0 flex-col bg-[#171717] px-2 py-6 text-white">
       <h1 className="mb-7 px-3">
         <Link to="/" className="flex h-16 items-center justify-center">
-          <img src={logo} alt="TableQuest" className="h-[52px] w-auto max-w-full object-contain" />
+          <img src={logo} alt="TableQuest" className="h-13 w-auto max-w-full object-contain" />
         </Link>
       </h1>
 

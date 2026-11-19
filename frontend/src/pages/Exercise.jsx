@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PlayerLevelHud from "../components/PlayerLevelHud";
+import Sidebar from "../components/Sidebar";
 import guideBook from "../assets/icons/guide-book.svg";
 import nodeCheck from "../assets/icons/node-check.svg";
 import nodeChest from "../assets/icons/node-chest.svg";
@@ -201,7 +202,7 @@ function ExercisePage({
   };
 
   return (
-    <section className="min-h-screen bg-[#171717] px-5 py-5 text-white sm:px-8 lg:px-10">
+    <section className="min-h-screen min-w-0 flex-1 bg-[#171717] px-5 py-5 text-white sm:px-8 lg:px-10">
       <div className="mx-auto max-w-[1160px]">
         <header className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_300px]">
           <div className={`rounded-2xl border-b-4 p-5 shadow-lg sm:p-6 ${theme.banner}`}>
@@ -450,16 +451,19 @@ function Exercise({
 }) {
   const pageData = creativeMode ? createCreativePageData(data, creativeTasks) : data;
   return (
-    <ExercisePage
-      data={pageData}
-      level={level}
-      xp={xp}
-      onStartExercise={onStartExercise}
-      onOpenGuide={onOpenGuide}
-      onProgressChange={onProgressChange}
-      onCompleteQuest={onCompleteQuest}
-      accent={creativeMode ? "purple" : "blue"}
-    />
+    <div className="flex min-h-screen">
+      <Sidebar />
+      <ExercisePage
+        data={pageData}
+        level={level}
+        xp={xp}
+        onStartExercise={onStartExercise}
+        onOpenGuide={onOpenGuide}
+        onProgressChange={onProgressChange}
+        onCompleteQuest={onCompleteQuest}
+        accent={creativeMode ? "purple" : "blue"}
+      />
+    </div>
   );
 }
 
