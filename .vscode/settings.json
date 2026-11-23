@@ -1,3 +1,4 @@
 {
     "css.lint.unknownAtRules": "ignore",
+    "cmake.sourceDirectory": "/Users/danilsm/Desktop/TableQuest26/Pico",
 }
