@@ -1,7 +1,7 @@
 import rocket from "../../assets/space/rocket.svg"
 import { MILESTONES, formatDistance } from "../../data/milestones"
 
-function getProgress(traveled) {
+function getLevelFromXp(traveled) {
   const n = MILESTONES.length
   const reached = MILESTONES.findLastIndex((m) => traveled >= m.distance)
 
@@ -19,7 +19,7 @@ function Planet({ icon, name }) {
 }
 
 function MilestoneBar({ traveled = 0.1 }) {
-  const progress = getProgress(traveled)
+  const progress = getLevelFromXp(traveled)
 
   return (
     <div className="card bg-[#171717] w-full shadow-md mt-10 rounded-3xl">
