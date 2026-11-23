@@ -78,6 +78,7 @@ function Social({
   onOpenGuide,
   onProgressChange,
   onCompleteQuest,
+  showSidebar = true,
 }) {
   const [selectedTask, setSelectedTask] = useState(null);
   const [completedTaskIds, setCompletedTaskIds] = useState(
@@ -177,7 +178,7 @@ function Social({
 
   return (
     <div className="flex min-h-screen">
-      <Sidebar />
+      {showSidebar && <Sidebar />}
       <section className="min-h-screen min-w-0 flex-1 bg-[#171717] px-5 py-5 text-white sm:px-8 lg:px-10">
         <div className="mx-auto max-w-[1160px]">
           <header className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_300px]">

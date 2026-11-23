@@ -448,11 +448,12 @@ function Exercise({
   onOpenGuide,
   onProgressChange,
   onCompleteQuest,
+  showSidebar = true,
 }) {
   const pageData = creativeMode ? createCreativePageData(data, creativeTasks) : data;
   return (
-    <div className="flex min-h-screen">
-      <Sidebar />
+    <div className={showSidebar ? "flex min-h-screen" : "min-w-0"}>
+      {showSidebar && <Sidebar />}
       <ExercisePage
         data={pageData}
         level={level}
