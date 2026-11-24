@@ -51,19 +51,19 @@ function AlertModeCard({ mode, title, subtitle, iconPath, isSelected, onSelect }
       onClick={() => onSelect(mode)}
       className={`flex min-h-[132px] flex-col items-start rounded-2xl border-2 p-5 text-left transition-colors last:col-span-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d6fd6] ${
         isSelected
-          ? "border-[#2d6fd6] bg-[#edf5ff] shadow-[0_4px_0_#2d6fd6]"
-          : "border-slate-200 bg-white shadow-[0_4px_0_#e2e8f0] hover:border-slate-300"
+          ? "border-[#2d6fd6] bg-[#2d6fd6]/15 shadow-[0_4px_0_#2d6fd6]"
+          : "border-white/10 bg-[#171717] shadow-[0_4px_0_#0a0a0a] hover:border-white/20"
       }`}
     >
       <svg
         aria-hidden="true"
         viewBox="0 0 24 24"
-        className={`mb-2 size-7 fill-none stroke-current stroke-[2] ${isSelected ? "text-[#2d6fd6]" : "text-slate-500"}`}
+        className={`mb-2 size-7 fill-none stroke-current stroke-[2] ${isSelected ? "text-[#60a5fa]" : "text-slate-400"}`}
       >
         <path d={iconPath} strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <span className="text-[16px] font-black">{title}</span>
-      <span className="mt-1 text-[13px] leading-relaxed text-[#46536a]">{subtitle}</span>
+      <span className="mt-1 text-[13px] leading-relaxed text-slate-400">{subtitle}</span>
     </button>
   );
 }
@@ -72,7 +72,7 @@ function QuestOutput({ title, text }) {
   return (
     <div>
       <h3 className="text-[13px] font-black">{title}</h3>
-      <p className="mt-4 text-[13px] text-[#46536a]">{text}</p>
+      <p className="mt-4 text-[13px] text-slate-400">{text}</p>
     </div>
   );
 }
@@ -93,7 +93,7 @@ function AlertSettings({ questInterval, setQuestInterval }) {
 
   return (
     <SettingsCard title="How your desk alerts you">
-      <p className="mt-2 text-[13px] text-[#46536a]">
+      <p className="mt-2 text-[13px] text-slate-400">
         Alerts start after your first hour of work and stop by themselves after a few seconds.
       </p>
 
@@ -111,7 +111,7 @@ function AlertSettings({ questInterval, setQuestInterval }) {
       <div className="mt-8 flex items-center justify-between gap-4">
         <div>
           <h3 className="text-[15px] font-semibold">Steady light, no flashing</h3>
-          <p className="mt-1 text-[13px] text-[#46536a]">
+          <p className="mt-1 text-[13px] text-slate-400">
             Recommended if you have epilepsy or are sensitive to light.
           </p>
         </div>
@@ -123,7 +123,7 @@ function AlertSettings({ questInterval, setQuestInterval }) {
         />
       </div>
 
-      <div className="mt-6 grid grid-cols-[1fr_1fr_1.15fr] gap-5 border-t border-slate-200 pt-5">
+      <div className="mt-6 grid grid-cols-[1fr_1fr_1.15fr] gap-5 border-t border-white/10 pt-5">
         <Counter
           title="Quest alert every"
           name="quest interval"

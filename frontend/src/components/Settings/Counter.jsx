@@ -5,7 +5,7 @@ function CounterButton({ label, onClick, disabled, children }) {
       aria-label={label}
       onClick={onClick}
       disabled={disabled}
-      className="grid size-12 shrink-0 place-items-center rounded-xl border border-slate-300 bg-white text-xl font-bold text-[#2d6fd6] shadow-sm transition-colors hover:border-[#2d6fd6] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d6fd6] disabled:cursor-not-allowed disabled:opacity-40"
+      className="grid size-12 shrink-0 place-items-center rounded-xl border border-white/10 bg-[#171717] text-xl font-bold text-[#60a5fa] shadow-sm transition-colors hover:border-[#2d6fd6] hover:bg-[#2d6fd6]/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d6fd6] disabled:cursor-not-allowed disabled:opacity-40"
     >
       {children}
     </button>

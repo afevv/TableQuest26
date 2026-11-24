@@ -55,25 +55,25 @@ function TableSimulator() {
         <div
           role="img"
           aria-label={`Current table height: level ${level} of ${MAX_TABLE_LEVEL}`}
-          className="flex h-24 w-8 flex-col-reverse gap-1 rounded-lg bg-slate-100 p-1"
+          className="flex h-24 w-8 flex-col-reverse gap-1 rounded-lg bg-[#171717] p-1"
         >
           {Array.from({ length: MAX_TABLE_LEVEL }, (_, index) => (
             <span
               key={index}
               className={`flex-1 rounded-sm transition-colors ${
-                level > index ? "bg-[#2d6fd6]" : "bg-slate-200"
+                level > index ? "bg-[#2d6fd6]" : "bg-white/10"
               }`}
             />
           ))}
         </div>
         <div>
-          <p className="text-xs font-semibold text-[#46536a]">Current table height</p>
-          <p className="text-sm font-black text-[#1d2a44]">
+          <p className="text-xs font-semibold text-slate-400">Current table height</p>
+          <p className="text-sm font-black text-white">
             Level {level} of {MAX_TABLE_LEVEL}
           </p>
         </div>
       </div>
-      <p aria-live="polite" className="mt-3 text-sm text-[#46536a]">
+      <p aria-live="polite" className="mt-3 text-sm text-slate-400">
         {lastMovement
           ? `The table has moved ${lastMovement} 1 level.`
           : "No table movement recorded yet."}

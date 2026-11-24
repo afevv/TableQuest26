@@ -23,7 +23,7 @@ function AboutUs() {
             {steps.map((step, index) => (
               <li
                 key={step}
-                className="min-h-24 rounded-2xl bg-slate-50 p-4 text-slate-800"
+                className="min-h-24 rounded-2xl bg-[#262626] p-4 text-slate-100 shadow-md"
               >
                 <span className="mb-2 flex size-9 items-center justify-center rounded-full bg-[#8b5cf6] font-bold text-white">
                   {index + 1}

@@ -12,7 +12,7 @@ function DepartmentRace() {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <section className="min-h-screen min-w-0 flex-1 p-6 bg-[#262626]">
+      <section className="min-h-screen min-w-0 flex-1 p-6 bg-[#171717]">
         <DepartmentRace_Header/>
 
         <DepartmentRace_Toggle value={view} onChange={setView} />

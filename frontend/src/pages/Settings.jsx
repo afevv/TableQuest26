@@ -9,7 +9,7 @@ function Settings({ questInterval, setQuestInterval }) {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <section className="min-h-screen min-w-0 flex-1 bg-[#f7f9fc] px-8 py-4 text-[#1d2a44]">
+      <section className="min-h-screen min-w-0 flex-1 bg-[#171717] px-8 py-4 text-white">
         <div className="mx-auto max-w-[1000px] space-y-5">
           <h1 className="text-[32px] font-black leading-tight">Settings</h1>
           <TableSimulator />

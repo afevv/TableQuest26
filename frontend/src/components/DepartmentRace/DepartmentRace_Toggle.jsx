@@ -9,7 +9,7 @@ function DepartmentRace_Toggle({ value, onChange }) {
   return (
     <div
       role="tablist"
-      className="relative mt-6 grid w-full max-w-xs grid-cols-2 rounded-3xl bg-[#171717] p-1"
+      className="relative mt-6 grid w-full max-w-xs grid-cols-2 rounded-3xl bg-[#262626] p-1"
     >
       <span
         aria-hidden="true"

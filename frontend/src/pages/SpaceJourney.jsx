@@ -13,7 +13,7 @@ function SpaceJourney() {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <section className="min-h-screen min-w-0 flex-1 bg-[#262626] p-6 text-white">
+      <section className="min-h-screen min-w-0 flex-1 bg-[#171717] p-6 text-white">
         <SpaceJourney_header />
         <MilestoneBar traveled={traveled} />
         <SpaceJourney_footer traveled={traveled} />

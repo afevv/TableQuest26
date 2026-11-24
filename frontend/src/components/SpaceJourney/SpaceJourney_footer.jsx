@@ -7,7 +7,7 @@ function SpaceJourney_footer({ traveled = 0 }) {
     return (
       <section className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <div className="card w-full bg-[#171717] shadow-md rounded-3xl">
+        <div className="card w-full bg-[#262626] shadow-md rounded-3xl">
           <div className="card-body">
             <h2 className="card-title text-[#D9A86C] text-base md:text-lg lg:text-xl">JUST UNLOCKED</h2>
             <h1 className="text-4xl xl:text-5xl font-bold">
@@ -19,7 +19,7 @@ function SpaceJourney_footer({ traveled = 0 }) {
           </div>
         </div>
 
-        <div className="card w-full bg-[#171717] shadow-md rounded-3xl">
+        <div className="card w-full bg-[#262626] shadow-md rounded-3xl">
           <div className="card-body">
             <h2 className="card-title text-primary/75 text-base md:text-lg lg:text-xl">DISTANCE TRAVELLED</h2>
             <h1 className="text-4xl xl:text-5xl font-bold wrap-break">{formatDistance(traveled)}</h1>
@@ -33,7 +33,7 @@ function SpaceJourney_footer({ traveled = 0 }) {
           </div>
         </div>
 
-        <div className="card w-full bg-[#171717] shadow-md rounded-3xl">
+        <div className="card w-full bg-[#262626] shadow-md rounded-3xl">
           <div className="card-body">
             <h2 className="card-title text-primary/75 text-base md:text-lg lg:text-xl">TEAM</h2>
             <h1 className="text-4xl xl:text-5xl font-bold">

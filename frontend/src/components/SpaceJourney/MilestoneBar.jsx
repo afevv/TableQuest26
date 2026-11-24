@@ -22,7 +22,7 @@ function MilestoneBar({ traveled = 0.1 }) {
   const progress = getLevelFromXp(traveled)
 
   return (
-    <div className="card bg-[#171717] w-full shadow-md mt-10 rounded-3xl">
+    <div className="card bg-[#262626] w-full shadow-md mt-10 rounded-3xl">
       <div className="card-body">
         <h2 className="card-title text-2xl md:text-3xl lg:text-4xl text-white font-bold mb-8">Milestone bar</h2>
 

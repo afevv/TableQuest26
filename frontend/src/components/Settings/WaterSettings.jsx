@@ -29,7 +29,7 @@ function GlassSizeField({ glassSize, onChange }) {
       <button
         type="button"
         onClick={() => setIsEditing(true)}
-        className="h-8 w-[178px] rounded-md border border-slate-300 bg-white px-2 text-xs font-bold text-[#2d6fd6] hover:border-[#2d6fd6] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d6fd6]"
+        className="h-8 w-[178px] rounded-md border border-white/10 bg-[#171717] px-2 text-xs font-bold text-[#60a5fa] hover:border-[#2d6fd6] hover:bg-[#2d6fd6]/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d6fd6]"
         aria-label={`Change glass size, currently ${glassSize} ml`}
       >
         Glass size: {glassSize} ml
@@ -51,7 +51,7 @@ function GlassSizeField({ glassSize, onChange }) {
         onBlur={() => setIsEditing(false)}
         onKeyDown={(event) => ["Enter", "Escape"].includes(event.key) && setIsEditing(false)}
         autoFocus
-        className="h-8 w-16 rounded-lg border border-slate-300 px-2 text-sm text-[#1d2a44] outline-none focus:border-[#2d6fd6]"
+        className="h-8 w-16 rounded-lg border border-white/10 bg-[#171717] px-2 text-sm text-white outline-none focus:border-[#2d6fd6]"
       />
       <span>ml</span>
     </label>
@@ -64,7 +64,7 @@ function HydrationWarning({ perReminder, hourlyIntake, shiftHours }) {
   return (
     <div
       role="alert"
-      className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-[13px] leading-relaxed text-amber-950"
+      className="mt-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-[13px] leading-relaxed text-amber-200"
     >
       <p className="font-black">Scientific hydration reminder</p>
       <p className="mt-1">
@@ -152,7 +152,7 @@ function WaterSettings() {
           />
         ))}
       </div>
-      <div className="mt-1 grid h-10 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 text-xs text-[#46536a]">
+      <div className="mt-1 grid h-10 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 text-xs text-slate-400">
         <p className="min-w-0 truncate" title={glassSummary}>
           {glassSummary}
         </p>
@@ -165,7 +165,7 @@ function WaterSettings() {
         </svg>
         <p>
           <strong>{alertCount} water alerts</strong>, one every {alertMinutes} min
-          <span className="text-[#46536a]">
+          <span className="text-slate-400">
             {" "}
             ({dailyGoal} ÷ {perReminder} rounded up, spread over {shiftHours} h after your first
             hour)
